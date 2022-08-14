@@ -4,8 +4,8 @@ class HouseInfo:
         self.data = data
 
     def get_data_by_area(self, field, rec_area=0):
-        # print("field is: " + field)
-        # print("rec_area is: " + str(rec_area))
+        #print("field is: " + field)
+        #print("rec_area is: " + str(rec_area))
         field_data = []
         for record in self.data:
             # print(type(self.data))
@@ -13,7 +13,7 @@ class HouseInfo:
             if rec_area == 0:
                 field_data.append(record[field])
             elif rec_area == int(record['area']):
-                field_data.append(record[field])
+                field_data.append(record[field])     
         return field_data              
 
     def get_data_by_date(self, field, rec_date=date.today()):
